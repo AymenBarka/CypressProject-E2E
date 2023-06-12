@@ -6,7 +6,7 @@
   "scripts": {
     "pretest": "rimraf -r ./cypress/report/mochawesome-report",
     "test": "npm run cypress-test || npm run posttest",
-    "cypress-test": "cypress run --spec cypress/integration/e2e/*.spec.js",
+    "cypress-test": "cypress run --spec cypress/integration/E2E/*.spec.js",
     "posttest": "npm run merge-reports && npm run generate-htmlreport",
     "merge-reports": "mochawesome-merge ./cypress/report/mochawesome-report/*.json > ./report1.json",
     "generate-htmlreport": "marge report1.json --reportDir cypress/report"
